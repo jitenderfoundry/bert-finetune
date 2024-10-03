@@ -15,7 +15,7 @@ import truefoundry.ml as tfm
 from truefoundry.ml import get_client ,ModelFramework
 from datetime import datetime, timezone
 from mlfoundry_utils import sanitize_name , MLFoundryCallback
-from config import *
+# from config import *
 
 
 TFY_INTERNAL_JOB_RUN_NAME = os.getenv("TFY_INTERNAL_JOB_RUN_NAME")
