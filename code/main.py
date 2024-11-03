@@ -117,7 +117,13 @@ def train_model(train_path : str, test_path : str , model_path : str, job_type :
     model_version = run.log_model(
         name=model_name,
         model_file_or_folder="trained-model/",
-        framework=ModelFramework.TRANSFORMERS 
+        framework=ModelFramework.TRANSFORMERS,
+        metadata={
+                    "base_model": f"{model_path}",
+                    "library_name": "transformers",
+                    "pipeline_tag": "text-classification",
+                    "huggingface_model_url": f"https://huggingface.co/{model_path}"
+                }
         )
     
     # model_version = client.log_model(
